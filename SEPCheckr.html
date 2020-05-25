@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<HEAD> <TITLE>JoshTV SEP Checker</TITLE><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@Joshblah555">
+<meta name="twitter:title" content="Checking the SEP">
+<meta name="twitter:description" content="Find out if restoring is possible!">
+<meta name="twitter:image" content="http://joshtv.net/content/SEPPYY.jpg"> </HEAD>
+<BODY>
+<body bgcolor="white">
+<center>
+
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+
+.button {
+  border-radius: 4px;
+  background-color: #B4EEB4;
+  border: none;
+  color: #000000;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00ab';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 70px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+/* Header/Logo Title */
+
+.header2 {
+text-align: center;
+color: white;
+}
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 30px;
+}
+
+/* Page Content */
+.content {padding:20px;}
+</style>
+</head>
+<body>
+
+<div class="header">
+
+<form action="http://www.joshtv.net/Guides/TheBeginningapr">
+<button class="button"><span>Back to Guides</span></button>
+
+
+  <h1>The SEP Checker</h1>
+</div>
+
+<div class="content">
+  <h1>Instructions:</h1>
+  <p>Use the drop-down menu to check if the SEP is <mark>Compatible</mark> or <mark>Not Compatible</mark> with the firmware you wish to restore to.</p>
+  <p>If the SEP is compatible, you can restore your device to that firmware with valid blobs.</p>
+  <p>If the SEP is not compatible, then you cannot restore to that firmware.</p>
+  <p>The currently signed firmwares for tvOS are: <b>13.4</b>, <b>13.4.5</b>
+                                    and <b>10.2.2</b></p>
+  <br>
+</div>
+
+</body>
+</html>
+
+
+<p style="font-size:30px;">Select the firmware you wish to restore:</p>
+<select id="test" name="form_select" onchange="showDiv(this)">
+<option value="1">13.4.5</option>
+    <option value="0">13.4</option>
+    <option value="0">13.3.1</option>
+    <option value="0">13.3</option>
+    <option value="0">13.2</option>
+    <option value="0">13.0</option>
+   <option value="0">12.4</option>
+   <option value="0">12.3</option>
+   <option value="0">12.2.1</option>
+   <option value="0">12.2</option>
+   <option value="0">12.1.2</option>
+   <option value="0">12.1.1</option>
+   <option value="0">12.1</option>
+   <option value="0">12.0.1</option>
+   <option value="0">12.0</option>
+   <option value="0">11.4.1</option>
+   <option value="0">11.4</option>
+   <option value="0">11.3</option>
+   <option value="0">11.2.6</option>
+   <option value="0">11.2.5</option>
+   <option value="0">11.2.1</option>
+   <option value="0">11.2</option>
+   <option value="0">11.1</option>
+   <option value="0">11.0</option>
+</select>
+<div class="header2">
+<a style="text-decoration:none; color:white" href="http://joshtv.net/Guides/compatible.html">
+<div id="hidden_div" style="background-color:green" style="display:none;">It's compatible! What's next?</div></a>
+</div></a>
+
+
+<a style="text-decoration:none; color:white" href="http://joshtv.net/Guides/incompatible.html">
+<div id="hidden_yup" style="background-color:red" style="display:none;">It's not compatible! Click for more info.</div></a>
+<script type="text/javascript">
+function showDiv(select){
+   if(select.value==1){
+    document.getElementById('hidden_div').style.display = "block";
+}else{
+    document.getElementById('hidden_div').style.display = "none";
+   }
+   
+   if(select.value==0){
+    document.getElementById('hidden_yup').style.display = "block";
+   }else{
+    document.getElementById('hidden_yup').style.display = "none";
+   }
+} 
+
+
+
+
+</script>
