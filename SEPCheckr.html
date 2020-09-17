@@ -97,10 +97,10 @@ color: white;
   <p>Use the drop-down menu to check if the SEP is <mark>Compatible</mark> or <mark>Not Compatible</mark> with the firmware you wish to restore to.</p>
   <p>If the SEP is compatible, you can restore your device to that firmware with valid blobs.</p>
   <p>If the SEP is not compatible, then you cannot restore to that firmware.</p>
-  <p>The currently signed firmwares for tvOS are: <b>13.4.8</b> and
+  <p>The currently signed firmwares for tvOS are:<b>14.0</b>, <b>13.4.8</b> and
                                     and <b>10.2.2</b></p>
   
- <p> The currently signed firmware for iPhone 6s - latest is: <b>13.7</b></p>
+ <p> The currently signed firmware for iPhone 6s - latest is:<b>14.0</b>, <b>13.7</b></p>
     <p> The currently signed firmware for iPhone 5s - iPhone 6 is: <b>12.4.8</b></p>
   <br>
 </div>
@@ -112,13 +112,14 @@ color: white;
 <p style="font-size:30px;">Select the firmware you wish to restore:</p>
 
 <select id="iOS" name="form_select" onchange="showDiv(this)">
-    <option value="3">iOS 13.7</option>
-    <option value="3">iOS 13.6.1</option>
-    <option value="3">iOS 13.6</option>
-    <option value="3">iOS 13.5.1</option>
-    <option value="3">iOS 13.5</option>
-    <option value="3">iOS 13.4.1</option>
-    <option value="3">iOS 13.4</option>
+  <option value="3">iOS 14.0</option>
+    <option value="4">iOS 13.7</option>
+    <option value="4">iOS 13.6.1</option>
+    <option value="4">iOS 13.6</option>
+    <option value="4">iOS 13.5.1</option>
+    <option value="4">iOS 13.5</option>
+    <option value="4">iOS 13.4.1</option>
+    <option value="4">iOS 13.4</option>
     <option value="0">iOS 13.3.1</option>
     <option value="0">iOS 13.3</option>
     <option value="0">iOS 13.2.3</option>
@@ -147,6 +148,7 @@ color: white;
 
 
 <select id="test" name="form_select" onchange="showDiv(this)">
+  <option value="1">tvOS 14.0</option>
   <option value="1">tvOS 13.4.8</option>
   <option value="1">tvOS 13.4.6</option>
 <option value="1">tvOS 13.4.5</option>
@@ -177,6 +179,10 @@ color: white;
 <div class="header2">
 <a style="text-decoration:none; color:white" href="http://joshtv.net/Guides/compatible.html">
 <div id="hidden_div" style="background-color:green" style="display:none;">It's compatible! What's next?</div></a>
+</div></a>
+  
+  <a style="text-decoration:none; color:white" href="http://joshtv.net/Guides/compatibleios.html">
+    <div id="hidden_unknown" style="background-color:purple" style="display:none;">Unconfirmed...</div></a>
 </div></a>
 
 <a style="text-decoration:none; color:black" href="http://joshtv.net/Guides/compatibleios.html">
@@ -213,6 +219,12 @@ function showDiv(select){
        document.getElementById('hidden_maybe2').style.display = "block";
    }else{
        document.getElementById('hidden_maybe2').style.display = "none";
+   }
+  
+  if(select.value==4){
+       document.getElementById('hidden_unknown').style.display = "block";
+   }else{
+       document.getElementById('hidden_unknown').style.display = "none";
    }
 } 
 
