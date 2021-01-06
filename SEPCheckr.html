@@ -49,6 +49,20 @@
   cursor: pointer;
   margin: 5px;
 }
+  
+  markyes {
+    padding-right: 2px;
+    padding-left: 2px;
+  background-color: green;
+  color: white;
+}
+  
+  markno {
+    padding-right: 2px;
+    padding-left: 2px;
+  background-color: red;
+  color: white;
+}
 
 .button span {
   cursor: pointer;
@@ -76,13 +90,13 @@
 }
 
 
-/* Style the body */
+
 body {
   font-family: Arial;
   margin: 0;
 }
 
-/* Header/Logo Title */
+
 
 .header2 {
 text-align: center;
@@ -97,7 +111,7 @@ color: white;
   font-size: 30px;
 }
 
-/* Page Content */
+
 .content {padding:20px;}
 </style>
 </head>
@@ -105,8 +119,8 @@ color: white;
 
 <div class="header">
 
-<form action="http://www.joshtv.net/Guides/TheBeginningapr">
-<button class="button"><span>Back to Guides</span></button>
+<form action="http://www.joshtv.net">
+<button class="button"><span>Back to JoshTV</span></button>
 
 
   <h1>The SEP Checker</h1>
@@ -114,7 +128,7 @@ color: white;
 
 <div class="content">
   <h1>Instructions:</h1>
-  <p>Use the drop-down menu to check if the SEP is <mark>Compatible</mark> or <mark>Not Compatible</mark> with the firmware you wish to restore to.</p>
+  <p>Use the drop-down menu to check if the SEP is <markyes>Compatible</markyes> or <markno>Not compatible</markno> with the firmware you wish to restore to.</p>
   <p>If the SEP is compatible, you can restore your device to that firmware with valid blobs.</p>
   <p>If the SEP is not compatible, then you cannot restore to that firmware.</p>
   <p>The currently signed firmwares for tvOS are: <b>14.3</b> <b>14.2</b>, <b>13.4.8</b> and
@@ -215,7 +229,7 @@ color: white;
 </div></a>
   
   <a style="text-decoration:none; color:black">
-    <div id="hidden_maybe" style="background-color:yellow" style="display:none;">SEP is compatible - BaseBand is NOT.</div></a>
+    <div id="hidden_maybe" style="background-color:yellow" style="display:none;">SEP is compatible - <markno>Baseband is not.</markno></markno></div></a>
 </div></a>
   
   <a style="text-decoration:none; color:white">
