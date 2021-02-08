@@ -20,7 +20,7 @@
   
 #hidden_no {
         display: none;
-    }
+}
 #hidden_yes6s {
     display: none;
 }
@@ -33,17 +33,18 @@
 #hidden_yes {
     display: none;
 }
-  
 #hidden_unknown {
     display: none;
 }
-  
 #hidden_a11 {
+    display: none;
+}
+#hidden_a11yes {
     display: none;
 }
 
 
-.button {
+ .button {
   border-radius: 4px;
   background-color: #B4EEB4;
   border: none;
@@ -58,27 +59,27 @@
 }
   
   markyes {
-    padding-right: 2px;
-    padding-left: 2px;
+  padding-right: 2px;
+  padding-left: 2px;
   background-color: green;
   color: white;
 }
   
   markno {
-    padding-right: 2px;
-    padding-left: 2px;
+  padding-right: 2px;
+  padding-left: 2px;
   background-color: red;
   color: white;
 }
 
-.button span {
+ .button span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-.button span:after {
+ .button span:after {
   content: '\00ab';
   position: absolute;
   opacity: 0;
@@ -87,30 +88,30 @@
   transition: 0.5s;
 }
 
-.button:hover span {
+ .button:hover span {
   padding-right: 25px;
 }
 
-.button:hover span:after {
+ .button:hover span:after {
   opacity: 1;
   right: 0;
 }
 
 
 
-body {
+  body {
   font-family: Arial;
   margin: 0;
 }
 
 
 
-.header2 {
-text-align: center;
-color: white;
+  .header2 {
+  text-align: center;
+  color: white;
 }
 
-.header {
+ .header {
   padding: 60px;
   text-align: center;
   background: #1abc9c;
@@ -155,13 +156,13 @@ color: white;
 <p style="font-size:30px;">Select the firmware you wish to restore:</p>
 
 <select id="iOS" name="form_select" onchange="showDiv(this)">
-  <option value="3">iOS 14.4</option>
-  <option value="3">iOS 14.3</option>
-  <option value="3">iOS 14.2</option>
-  <option value="3">iOS 14.2.1</option>
-  <option value="3">iOS 14.1</option>
-  <option value="3">iOS 14.0.1</option>
-  <option value="3">iOS 14.0</option>
+    <option value="3">iOS 14.4</option>
+    <option value="3">iOS 14.3</option>
+    <option value="3">iOS 14.2</option>
+    <option value="3">iOS 14.2.1</option>
+    <option value="3">iOS 14.1</option>
+    <option value="3">iOS 14.0.1</option>
+    <option value="3">iOS 14.0</option>
     <option value="4">iOS 13.7</option>
     <option value="4">iOS 13.6.1</option>
     <option value="4">iOS 13.6</option>
@@ -215,21 +216,21 @@ color: white;
 
 
 <select id="test" name="form_select" onchange="showDiv(this)">
-  <option value="1">tvOS 14.4</option>
-  <option value="1">tvOS 14.3</option>
-  <option value="1">tvOS 14.2</option>
-  <option value="1">tvOS 14.1</option>
-  <option value="1">tvOS 14.0.2</option>
-  <option value="1">tvOS 14.0.1</option>
-  <option value="1">tvOS 14.0</option>
-  <option value="1">tvOS 13.4.8</option>
-  <option value="1">tvOS 13.4.6</option>
-<option value="1">tvOS 13.4.5</option>
-    <option value="1">tvOS 13.4</option>
-    <option value="0">tvOS 13.3.1</option>
-    <option value="0">tvOS 13.3</option>
-    <option value="0">tvOS 13.2</option>
-    <option value="0">tvOS 13.0</option>
+   <option value="1">tvOS 14.4</option>
+   <option value="1">tvOS 14.3</option>
+   <option value="1">tvOS 14.2</option>
+   <option value="1">tvOS 14.1</option>
+   <option value="1">tvOS 14.0.2</option>
+   <option value="1">tvOS 14.0.1</option>
+   <option value="1">tvOS 14.0</option>
+   <option value="1">tvOS 13.4.8</option>
+   <option value="1">tvOS 13.4.6</option>
+   <option value="1">tvOS 13.4.5</option>
+   <option value="1">tvOS 13.4</option>
+   <option value="0">tvOS 13.3.1</option>
+   <option value="0">tvOS 13.3</option>
+   <option value="0">tvOS 13.2</option>
+   <option value="0">tvOS 13.0</option>
    <option value="0">tvOS 12.4</option>
    <option value="0">tvOS 12.3</option>
    <option value="0">tvOS 12.2.1</option>
@@ -249,16 +250,17 @@ color: white;
    <option value="0">tvOS 11.1</option>
    <option value="0">tvOS 11.0</option>
 </select>
+
 <div class="header2">
 <a style="text-decoration:none; color:white" href="http://joshtv.net/Guides/compatible.html">
-<div id="hidden_yes" style="background-color:green" style="display:none;">It's compatible! What's next?</div></a>
+    <div id="hidden_yes" style="background-color:green" style="display:none;">It's compatible! What's next?</div></a>
 </div></a>
   
-  <a style="text-decoration:none; color:black">
+<a style="text-decoration:none; color:black">
     <div id="hidden_maybe" style="background-color:yellow" style="display:none;">SEP is compatible - <markno>Baseband is not.</markno></div></a>
 </div></a>
   
-  <a style="text-decoration:none; color:white">
+<a style="text-decoration:none; color:white">
     <div id="hidden_unknown" style="background-color:purple" style="display:none;">Unconfirmed for the latest.</div></a>
 </div></a>
 
@@ -274,8 +276,13 @@ color: white;
     <div id="hidden_a11" style="background-color:yellow" style="display:none;">SEP is incompatible for <markno>A11</markno> or higher.</div></a>
 </div></a>
 
+<a style="text-decoration:none; color:white" href="http://joshtv.net/Guides/compatible.html">
+    <div id="hidden_a11yes" style="background-color:green" style="display:none;">It's compatible! What's next?</div></a>
+</div></a>
+
 <a style="text-decoration:none; color:white" href="http://joshtv.net/Guides/incompatible.html">
-<div id="hidden_no" style="background-color:red" style="display:none;">It's not compatible! Click for more info.</div></a>
+    <div id="hidden_no" style="background-color:red" style="display:none;">It's not compatible! Click for more info.</div></a>
+
 <script type="text/javascript">
 function showDiv(select){
    if(select.value==0){
@@ -289,34 +296,37 @@ function showDiv(select){
    }else{
     document.getElementById('hidden_yes6s').style.display = "none";
    }
+   
    if(select.value==5){
-       document.getElementById('hidden_yes5s').style.display = "block";
+     document.getElementById('hidden_yes5s').style.display = "block";
    }else{
-       document.getElementById('hidden_yes5s').style.display = "none";
+    document.getElementById('hidden_yes5s').style.display = "none";
    }
    
    if(select.value==1){
-       document.getElementById('hidden_yes').style.display = "block";
+    document.getElementById('hidden_yes').style.display = "block";
    }else{
-       document.getElementById('hidden_yes').style.display = "none";
+    document.getElementById('hidden_yes').style.display = "none";
    }
   
   if(select.value==2){
-       document.getElementById('hidden_unknown').style.display = "block";
+    document.getElementById('hidden_unknown').style.display = "block";
    }else{
-       document.getElementById('hidden_unknown').style.display = "none";
+    document.getElementById('hidden_unknown').style.display = "none";
    }
+  
   if(select.value==4){
-       document.getElementById('hidden_maybe').style.display = "block";
+    document.getElementById('hidden_maybe').style.display = "block";
    }else{
-       document.getElementById('hidden_maybe').style.display = "none";
+    document.getElementById('hidden_maybe').style.display = "none";
    }
+  
   if(select.value==3){
-       document.getElementById('hidden_yes').style.display = "block";
-       document.getElementById('hidden_a11').style.display = "block";
+    document.getElementById('hidden_a11yes').style.display = "block";
+    document.getElementById('hidden_a11').style.display = "block";
    }else{
-       document.getElementById('hidden_yes').style.display = "none";
-       document.getElementById('hidden_a11').style.display = "none";
+    document.getElementById('hidden_a11yes').style.display = "none";
+    document.getElementById('hidden_a11').style.display = "none";
    }
 } 
 
